@@ -5,10 +5,8 @@ import { WishItem } from '../shared/models/WishItem';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'] 
 })
 export class AppComponent {
   items: WishItem[] = [
@@ -19,7 +17,7 @@ export class AppComponent {
   ];
   title = 'My Wish-List';
 
-  newWishText = "";
+  newWishText= "";
 
   toggleItem(item : WishItem){
     item.isComplete = !item.isComplete;
